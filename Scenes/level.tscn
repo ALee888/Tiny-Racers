@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dka7dimt64d0f"]
+
+[ext_resource type="PackedScene" uid="uid://cj51vgl03dg4y" path="res://Scenes/racer.tscn" id="1_u7omd"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 719.0
+offset_bottom = 462.0
+
+[node name="Racer" parent="." instance=ExtResource("1_u7omd")]
+position = Vector2(145, 102)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(336, 223)
+zoom = Vector2(1.435, 1.435)

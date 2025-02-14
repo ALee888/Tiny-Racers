@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj51vgl03dg4y"]
+
+[ext_resource type="Script" path="res://Scripts/racer.gd" id="1_fdj7p"]
+[ext_resource type="Texture2D" uid="uid://b8rn2ns0tcyp2" path="res://Assets/Slot-Car.png" id="2_ww7l5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ultj"]
+size = Vector2(28, 18)
+
+[node name="Racer" type="CharacterBody2D"]
+slide_on_ceiling = false
+script = ExtResource("1_fdj7p")
+metadata/_edit_vertical_guides_ = [8.0, -7.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_ww7l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5ultj")
