@@ -1,6 +1,7 @@
 ## Source: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
 extends CharacterBody2D
 
+
 # Gear shifting variables
 enum gears {PARK, NEUTRAL, REVERSE, DRIVE}
 var gear: gears = gears.DRIVE
@@ -9,7 +10,7 @@ var wheel_base = 16  # Distance from front to rear wheel
 var steering_angle = 10  # Amount that front wheel turns, in degrees
 var steer_direction
 # Forward
-var engine_power = 900
+var engine_power = 800
 var acceleration = Vector2.ZERO
 # Friction/drag
 var friction = -55
@@ -22,6 +23,7 @@ var slip_speed = 400  # Speed where traction is reduced
 var traction_fast = 2.5 # High-speed traction
 var traction_slow = 10  # Low-speed traction
 
+var lap = 0
 
 ## Physics call
 func _physics_process(delta: float) -> void:

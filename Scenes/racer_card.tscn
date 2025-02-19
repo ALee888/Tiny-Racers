@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://c33733rsc6emg"]
+
+[ext_resource type="Script" path="res://Scripts/racer_card.gd" id="1_kfhf0"]
+
+[node name="RacerCard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kfhf0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VContainer"]
+layout_mode = 2
+
+[node name="LapLabel" type="Label" parent="PanelContainer/VContainer/HBoxContainer"]
+layout_mode = 2
+text = "0/3"
+
+[node name="InfoButton" type="Button" parent="PanelContainer/VContainer/HBoxContainer"]
+layout_mode = 2
+text = "i"
+
+[node name="PlaceLabel" type="Label" parent="PanelContainer/VContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "1st"
+
+[node name="SpeedLabel" type="Label" parent="PanelContainer/VContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "000"
